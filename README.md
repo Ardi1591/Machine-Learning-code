@@ -1,6 +1,6 @@
 # Machine-Learning-code
 
-This folder contains the MATLAB code and dataset files for **Remaining Useful Life (RUL) estimation using a CNN** on the **SG001** dataset (tabular multi-channel time-series), following the workflow style of the :contentReference[oaicite:1]{index=1} Predictive Maintenance example. :contentReference[oaicite:2]{index=2}
+This folder contains the MATLAB code,dataset files for **Remaining Useful Life (RUL) estimation using a CNN** on the **SG001** dataset (tabular multi-channel time-series), following the workflow style of the :contentReference[oaicite:1]{index=1} Predictive Maintenance example and the code plus the output from module 3,4,5 and 8. This file will heavily discus the module 9 in dept.
 
 ---
 
