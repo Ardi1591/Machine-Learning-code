@@ -1,6 +1,6 @@
 # Machine-Learning-code
 
-This folder contains the MATLAB code,dataset files for **Remaining Useful Life (RUL) estimation using a CNN** on the **SG001** dataset (tabular multi-channel time-series), following the workflow style of the :contentReference[oaicite:1]{index=1} Predictive Maintenance example and the code plus the output from module 3,4,5 and 8. This file will heavily discus the module 9 in dept.
+This folder contains the MATLAB code,dataset files for **Remaining Useful Life (RUL) estimation using a CNN** on the **SG001** dataset (tabular multi-channel time-series), following the workflow style of the Predictive Maintenance example and the code plus the output from module 3,4,5 and 8. This file will heavily discus the module 9 in depth.
 
 ---
 
@@ -19,15 +19,13 @@ The pipeline implements an end-to-end RUL estimator:
 9. **Post-process predictions**: clamp, smooth, and optionally enforce monotone decreasing RUL
 10. **Evaluate** with per-unit RMSE distribution and sample True vs Predicted RUL plots
 
-This is inspired by the “Remaining Useful Life Estimation Using Convolutional Neural Network” example. :contentReference[oaicite:3]{index=3}
-
+This work is inspired by the “Remaining Useful Life Estimation Using Convolutional Neural Network” example. 
+link :https://uk.mathworks.com/help/predmaint/ug/remaining-useful-life-estimation-using-convolutional-neural-network.html
 ---
 
 ## Requirements
 
 - MATLAB (tested with R2025b)
-- **Deep Learning Toolbox** (required) :contentReference[oaicite:4]{index=4}
-- **Predictive Maintenance Toolbox** (optional: only needed if you use `prognosability`) :contentReference[oaicite:5]{index=5}
 
 ---
 
