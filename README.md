@@ -40,8 +40,8 @@ This is inspired by the “Remaining Useful Life Estimation Using Convolutional 
 
 ### MATLAB scripts/functions
 - `FD001_RUL_CNN_WebsiteStyle.m`  
-  Main script (your “website-style” workflow) that trains the CNN and evaluates predictions.
-  > Note: despite the name, this script is used for SG001 in your setup; you can rename it to `SG001_RUL_CNN_WebsiteStyle.m` for clarity.
+  Main script (the “website-style” workflow) that trains the CNN and evaluates predictions.
+
 
 - `localLoadDataOES.m`  
   Data loader: reads SG001 text files, assigns variable names, splits rows into unit-wise sequences, and generates per-timestep RUL vectors.
@@ -79,7 +79,7 @@ A numeric vector of length = number of unique test units:
      FD001_RUL_CNN_WebsiteStyle
      ```
 
-4. Outputs you should see:
+4. Outputs that can be seen:
    - Training Progress plot (RMSE/loss)
    - RMSE histogram over test units
    - A “website-style” plot: **True vs Predicted RUL** for a random (or best/worst) test unit
