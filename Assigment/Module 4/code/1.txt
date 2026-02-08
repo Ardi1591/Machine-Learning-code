@@ -1,0 +1,22 @@
+(paste on cmd)
+
+clear; clc; close all;
+rng(0);
+
+% Means and covariances (from the provided slide)
+Mean1  = [ 3; -1];      % class 0
+Sigma1 = [2 4; 4 10];
+
+Mean2  = [-3; -1];      % class 1
+Sigma2 = [2 4; 4 10];
+
+% Generate training/testing data
+trainingSamples = 10000;
+[trainingData, trainingTarget] = GenerateGaussianData(trainingSamples, Mean1, Sigma1, Mean2, Sigma2);
+
+testingSamples = 10000;
+[testingData, testingTarget] = GenerateGaussianData(testingSamples, Mean1, Sigma1, Mean2, Sigma2);
+
+% Convert target to class labels 0/1 and plot training data
+trainingClass = CollapseBinaryVectorToClass(trainingTarget);
+PlotTwoClasses(trainingData, trainingClass, "Input training data");

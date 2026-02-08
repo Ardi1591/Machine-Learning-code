@@ -1,0 +1,24 @@
+% --- decode class 0 ---
+fidx = (trainingClass == 0);
+S.cA_data = trainingData(:, fidx);
+
+% --- decode class 1 ---
+fidx = (trainingClass == 1);
+S.cB_data = trainingData(:, fidx);
+
+% --- means (per feature) ---
+S.MeanEstA(1) = mean(S.cA_data(1,:));
+S.MeanEstA(2) = mean(S.cA_data(2,:));
+S.MeanEstB(1) = mean(S.cB_data(1,:));
+S.MeanEstB(2) = mean(S.cB_data(2,:));
+
+% --- stds (per feature) ---
+S.StdEstA(1) = std(S.cA_data(1,:), 0);   % same as sqrt(var(...))
+S.StdEstA(2) = std(S.cA_data(2,:), 0);
+S.StdEstB(1) = std(S.cB_data(1,:), 0);
+S.StdEstB(2) = std(S.cB_data(2,:), 0);
+
+% --- priors (IMPORTANT: use #samples = columns) ---
+Ntotal = size(trainingData,2);
+S.P_A = size(S.cA_data,2) / Ntotal;
+S.P_B = size(S.cB_data,2) / Ntotal;

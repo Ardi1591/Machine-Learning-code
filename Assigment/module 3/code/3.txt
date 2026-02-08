@@ -1,0 +1,10 @@
+% Step 3: Implement K-means from first principles
+K = 2;                   % Q: "How many clusters?" -> Here, we generated 2
+maxIter = 10;
+tol = 1e-4;
+
+% Initial centroids: choose 2 random points from the dataset (from module)
+idx0 = randperm(size(X,1), K);
+C0 = X(idx0, :);
+
+[idx, C, SSE_hist, idx_hist, C_hist] = myKmeansScratch(X, C0, maxIter, tol);

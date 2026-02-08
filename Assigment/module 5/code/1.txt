@@ -1,0 +1,15 @@
+clear; clc; close all;
+rng(0);  % repeatable noise
+
+A = 1.6; B = 2.5; C = 6;
+
+x = linspace(-4, 6, 100);            % 1x100
+noise = 5 * randn(1, 100);           % mean 0, std 5
+y = A*x.^2 + B*x + C + noise;        % noisy observations
+
+figure;
+plot(x, y, 'bo');
+grid on; xlabel('x'); ylabel('y');
+title('Raw noisy data plot');
+
+(copy to  Matblab cmd)

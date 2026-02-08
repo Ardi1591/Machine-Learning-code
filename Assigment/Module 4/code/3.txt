@@ -1,0 +1,13 @@
+data = testingData;
+
+logPA = log(S.P_A) + log(Gauss1D(data(1,:),S.MeanEstA(1),S.StdEstA(1))) + ...
+                   log(Gauss1D(data(2,:),S.MeanEstA(2),S.StdEstA(2)));
+
+logPB = log(S.P_B) + log(Gauss1D(data(1,:),S.MeanEstB(1),S.StdEstB(1))) + ...
+                   log(Gauss1D(data(2,:),S.MeanEstB(2),S.StdEstB(2)));
+
+testingClass = zeros(1, size(data,2));
+testingClass(logPB >= logPA) = 1;
+
+PlotTwoClasses(data, testingClass, "Recognized on testing data");
+title("Recognized on testing data");

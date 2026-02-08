@@ -1,0 +1,8 @@
+% Step 2: Concatenate the datasets and plot(paste on cmd)
+X = [data1; data2];              % (2000 x 2)
+
+figure;
+scatter(X(:,1), X(:,2), 10, 'filled');
+grid on; xlabel('x-value'); ylabel('y-value');
+title('Merged Dataset');
+legend('Dataset','Location','best');

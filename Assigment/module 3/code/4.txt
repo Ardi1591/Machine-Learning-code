@@ -1,0 +1,11 @@
+% Step 4: Run it and plot results
+% Plot SSE (overall distance) per iteration
+figure;
+plot(1:numel(SSE_hist), SSE_hist, '-o');
+grid on; xlabel('Iteration'); ylabel('SSE (sum of squared distances)');
+title('Overall distance vs iteration');
+
+% Plot final clustering result (like slide Step 4)
+figure;
+plotClusters2D(X, idx, C);
+title("KMeans Clustering (MaxIterations = " + maxIter + ")");

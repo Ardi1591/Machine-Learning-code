@@ -1,0 +1,17 @@
+% Step 1: Generate dataset (paste on matblab cmd)
+
+N = 1000;                 % points per cluster
+mu1 = [-4, -1];
+mu2 = [ 3,  4];
+s1  = 0.75;               % std each dimension (uncorrelated => randn is enough)
+s2  = 2.0;
+
+data1 = s1*randn(N,2) + mu1;     % N x 2
+data2 = s2*randn(N,2) + mu2;     % N x 2
+
+figure;
+scatter(data1(:,1), data1(:,2), 10, 'filled'); hold on;
+scatter(data2(:,1), data2(:,2), 10, 'filled');
+grid on; xlabel('x-value'); ylabel('y-value');
+title('Original Dataset');
+legend('Dataset 1','Dataset 2','Location','best');

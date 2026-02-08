@@ -1,0 +1,24 @@
+% Design matrix (N x 3)
+X = [x(:).^2, x(:), ones(numel(x),1)];   % 100x3
+Y = y(:);                                 % 100x1
+
+% Linear regression estimate
+beta = regress(Y, X);                     % beta = [Ahat; Bhat; Chat]
+
+Ahat = beta(1); Bhat = beta(2); Chat = beta(3);
+
+% Predicted curve
+y_fit = X * beta;
+
+% Plot raw data + fitted curve
+figure;
+plot(x, y, 'bo'); hold on;
+plot(x, y_fit, 'r-', 'LineWidth', 2);
+grid on; xlabel('x'); ylabel('y');
+title('Raw noisy data plot + fitted quad curve');
+legend('raw data', 'fitted quad data', 'Location', 'best');
+
+% (Optional) show estimated parameters + error
+mse = mean((Y - y_fit).^2);
+fprintf("Estimated: A=%.4f, B=%.4f, C=%.4f\n", Ahat, Bhat, Chat);
+fprintf("MSE = %.4f\n", mse);
