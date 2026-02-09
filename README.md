@@ -40,6 +40,8 @@ link: https://uk.mathworks.com/help/predmaint/ug/remaining-useful-life-estimatio
 - `FD001_RUL_CNN_WebsiteStyle.m`  
   Main script (the “website-style” workflow) that trains the CNN and evaluates predictions.
 
+- `SG001_RUL_CNN_MathWorksStyle`  
+  Alternative main script (the “website-style” workflow) that trains the CNN and evaluates predictions, it has large percentage of error.
 
 - `localLoadDataOES.m`  
   Data loader: reads SG001 text files, assigns variable names, splits rows into unit-wise sequences, and generates per-timestep RUL vectors.
