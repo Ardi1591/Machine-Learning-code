@@ -40,7 +40,7 @@ link: https://uk.mathworks.com/help/predmaint/ug/remaining-useful-life-estimatio
 - `FD001_RUL_CNN_WebsiteStyle.m`  
   Main script (the “website-style” workflow) that trains the CNN and evaluates predictions.
 
-- `SG001_RUL_CNN_MathWorksStyle`  
+- `SG001_RUL_CNN_MathWorksStyle.m`  
   Alternative main script (the “website-style” workflow) that trains the CNN and evaluates predictions, it has large percentage of error.
 
 - `localLoadDataOES.m`  
