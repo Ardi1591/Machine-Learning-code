@@ -19,8 +19,8 @@ The pipeline implements an end-to-end RUL estimator:
 9. **Post-process predictions**: clamp, smooth, and optionally enforce monotone decreasing RUL
 10. **Evaluate** with per-unit RMSE distribution and sample True vs Predicted RUL plots
 
-This work is inspired by the “Remaining Useful Life Estimation Using Convolutional Neural Network” example. 
-link :https://uk.mathworks.com/help/predmaint/ug/remaining-useful-life-estimation-using-convolutional-neural-network.html
+This work is inspired by the “Remaining Useful Life Estimation Using Convolutional Neural Network”, example 
+link: https://uk.mathworks.com/help/predmaint/ug/remaining-useful-life-estimation-using-convolutional-neural-network.html
 ---
 
 ## Requirements
